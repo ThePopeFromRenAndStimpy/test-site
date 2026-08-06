@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Acme Home Services</title>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f7f7;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:#1f2937;
+    color:white;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#4ade80;
+}
+
+.hero{
+    height:70vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("https://picsum.photos/1600/900?random=1");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h2{
+    font-size:54px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.button{
+    display:inline-block;
+    background:#22c55e;
+    color:white;
+    padding:15px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#16a34a;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+h2{
+    margin-bottom:35px;
+    text-align:center;
+    font-size:38px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+}
+
+.contact{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:700px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+.hero h2{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Acme Home Services</h1>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h2>Quality Craftsmanship.<br>Honest Pricing.</h2>
+
+<p>Serving homeowners with reliable repair, remodeling, and construction services.</p>
+
+<a class="button" href="#contact">
+Request an Estimate
+</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2>Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Deck Repair</h3>
+<p>Repairs, rebuilding, staining, and maintenance.</p>
+</div>
+
+<div class="card">
+<h3>Interior Painting</h3>
+<p>Professional finishes for every room.</p>
+</div>
+
+<div class="card">
+<h3>Drywall</h3>
+<p>Patching, repairs, installation, and texture matching.</p>
+</div>
+
+<div class="card">
+<h3>Pressure Washing</h3>
+<p>Driveways, siding, patios, fences, and more.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Recent Projects</h2>
+
+<div class="gallery">
+
+<img src="https://picsum.photos/500/350?random=2">
+<img src="https://picsum.photos/500/350?random=3">
+<img src="https://picsum.photos/500/350?random=4">
+<img src="https://picsum.photos/500/350?random=5">
+<img src="https://picsum.photos/500/350?random=6">
+<img src="https://picsum.photos/500/350?random=7">
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2>About Us</h2>
+
+<p>
+
+Acme Home Services is committed to delivering dependable workmanship,
+clear communication, and projects completed with attention to detail.
+Whether it's a small repair or a larger renovation, customer satisfaction
+is our highest priority.
+
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact">
+
+<h3>Request a Free Estimate</h3>
+
+<p>📞 (555) 555-5555</p>
+
+<p>✉️ estimates@example.com</p>
+
+<p>Serving Your Local Area</p>
+
+<br>
+
+<a class="button" href="mailto:estimates@example.com">
+Email Us
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Acme Home Services
+
+</footer>
+
+</body>
+</html>
