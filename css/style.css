@@ -1,0 +1,183 @@
+```css
+/* =========================
+   Brand Colors
+========================= */
+
+:root {
+
+    --bright-orange: #FF8A1F;
+    --bright-blue: #2F80ED;
+    --dark-orange: #C05632;
+    --dark-blue: #102A43;
+    --white: #F8FAFC;
+
+}
+
+
+/* =========================
+   Basic Reset
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--white);
+
+    color: var(--dark-blue);
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+
+    background-color: var(--dark-blue);
+
+    color: var(--white);
+
+    padding: 30px;
+
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav a {
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    margin-right: 20px;
+
+}
+
+
+nav a:hover {
+
+    color: var(--bright-orange);
+
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.call-button,
+.button {
+
+    display: inline-block;
+
+    background-color: var(--bright-orange);
+
+    color: var(--white);
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+.call-button:hover,
+.button:hover {
+
+    background-color: var(--dark-orange);
+
+}
+
+
+/* =========================
+   Estimate Form
+========================= */
+
+.modal-content {
+
+    max-width: 500px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+}
+
+
+textarea {
+
+    min-height: 120px;
+
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+
+    background-color: var(--dark-blue);
+
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+```
