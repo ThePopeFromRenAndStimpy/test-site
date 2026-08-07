@@ -10,17 +10,24 @@
     --dark-blue: #102A43;
     --white: #F8FAFC;
 
+    --text-muted: #52677A;
 }
 
 
+
 /* =========================
-   Basic Reset
+   Reset
 ========================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -28,7 +35,7 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: var(--white);
+    background: var(--white);
 
     color: var(--dark-blue);
 
@@ -37,32 +44,47 @@ body {
 }
 
 
+
 /* =========================
    Header
 ========================= */
 
 header {
 
-    background-color: var(--dark-blue);
+    background: var(--dark-blue);
 
     color: var(--white);
 
-    padding: 30px;
+    padding: 20px 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
 
 }
 
 
-/* =========================
-   Navigation
-========================= */
+header h1 {
+
+    font-size: clamp(22px, 5vw, 28px);
+
+    line-height: 1.2;
+
+}
+
+
 
 nav a {
 
     color: var(--white);
 
+    margin-left: 25px;
+
     text-decoration: none;
 
-    margin-right: 20px;
+    transition: .2s ease;
 
 }
 
@@ -74,108 +96,448 @@ nav a:hover {
 }
 
 
+
 /* =========================
    Buttons
 ========================= */
 
-.call-button,
-.button {
+
+.button,
+.call-button {
+
 
     display: inline-block;
 
-    background-color: var(--bright-orange);
+    background: var(--bright-orange);
 
     color: var(--white);
 
-    padding: 12px 24px;
+    padding: 14px 30px;
 
     border-radius: 8px;
 
     text-decoration: none;
 
-    border: none;
+    font-weight: bold;
 
-    cursor: pointer;
+    transition: .25s ease;
+
+}
+
+
+
+.button:hover,
+.call-button:hover {
+
+    background: var(--dark-orange);
+
+    transform: translateY(-2px);
 
 }
 
 
-.call-button:hover,
-.button:hover {
-
-    background-color: var(--dark-orange);
-
-}
 
 
 /* =========================
-   Estimate Form
+   Hero
 ========================= */
+
+
+.hero {
+
+
+    height: 70vh;
+
+
+    background:
+
+    linear-gradient(
+        rgba(16,42,67,.65),
+        rgba(16,42,67,.65)
+    ),
+
+    url("https://picsum.photos/1600/900?random=1");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+    color:white;
+
+
+}
+
+
+.hero-content {
+
+    max-width:800px;
+
+    padding:20px;
+
+}
+
+
+
+.hero h2 {
+
+    font-size: clamp(36px,5vw,54px);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p {
+
+    font-size:22px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+/* =========================
+   Sections
+========================= */
+
+
+section {
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:80px 30px;
+
+}
+
+
+section h2 {
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+/* =========================
+   Services
+========================= */
+
+
+.services {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(16,42,67,.08);
+
+
+    transition:.3s ease;
+
+}
+
+
+
+.card:hover {
+
+
+    transform:translateY(-6px);
+
+
+    box-shadow:
+
+    0 18px 35px rgba(16,42,67,.15);
+
+
+}
+
+
+
+.card h3 {
+
+    margin-bottom:15px;
+
+    color:var(--bright-blue);
+
+}
+
+
+
+
+/* =========================
+   Gallery
+========================= */
+
+
+.gallery {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+
+    gap:20px;
+
+}
+
+
+
+.gallery img {
+
+    width:100%;
+
+    border-radius:10px;
+
+    display:block;
+
+}
+
+
+
+
+
+/* =========================
+   About
+========================= */
+
+
+.about {
+
+    text-align:center;
+
+    max-width:800px;
+
+}
+
+
+
+/* =========================
+   Contact
+========================= */
+
+
+.contact {
+
+
+    background:white;
+
+
+    padding:40px;
+
+
+    border-radius:12px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(16,42,67,.08);
+
+
+}
+
+
+
+
+/* =========================
+   Forms
+========================= */
+
 
 .modal-content {
 
-    max-width: 500px;
+    background:white;
 
-    margin: 40px auto;
+    max-width:500px;
 
-    padding: 30px;
+    padding:30px;
 
-    background-color: white;
-
-    border-radius: 12px;
+    border-radius:12px;
 
 }
+
 
 
 .form-group {
 
-    margin-bottom: 20px;
+    margin-bottom:20px;
 
 }
+
 
 
 label {
 
-    display: block;
+    display:block;
 
-    margin-bottom: 6px;
+    margin-bottom:6px;
+
+    font-weight:bold;
 
 }
+
 
 
 input,
 textarea {
 
-    width: 100%;
+    width:100%;
 
-    padding: 12px;
+    padding:12px;
 
-    border: 1px solid #ccc;
+    border:1px solid #ccc;
 
-    border-radius: 6px;
+    border-radius:6px;
 
 }
+
 
 
 textarea {
 
-    min-height: 120px;
+    min-height:120px;
 
 }
+
+
+
 
 
 /* =========================
    Footer
 ========================= */
 
+
 footer {
 
-    background-color: var(--dark-blue);
+    background:var(--dark-blue);
 
-    color: var(--white);
+    color:white;
 
-    text-align: center;
+    text-align:center;
 
-    padding: 20px;
+    padding:30px;
+
+}
+
+
+
+
+/* =========================
+   Mobile
+========================= */
+
+
+@media(max-width:700px){
+
+
+header {
+
+    flex-direction:column;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+
+header h1 {
+
+    margin-bottom:15px;
+
+}
+
+
+
+nav {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+nav a {
+
+    margin-left:0;
+
+}
+
+
+
+.call-button {
+
+    margin-top:15px;
+
+}
+
+
+
+.hero h2 {
+
+    font-size:34px;
+
+}
+
+
+.hero p {
+
+    font-size:18px;
+
+}
+
 
 }
