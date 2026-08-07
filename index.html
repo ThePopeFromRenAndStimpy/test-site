@@ -162,6 +162,90 @@ footer{
     padding:30px;
 }
 
+/* Estimate Form Modal */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:500px;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    position:relative;
+}
+
+.modal-content h2{
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+    color:#555;
+}
+
+.close:hover{
+    color:#111;
+}
+
+.form-group{
+    margin-bottom:18px;
+    text-align:left;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+    padding:12px;
+
+    border:1px solid #ccc;
+    border-radius:8px;
+
+    font-size:16px;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.form-group textarea{
+    height:120px;
+    resize:none;
+}
+
+.form-submit{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
 @media (max-width:700px){
 
     header{
@@ -223,7 +307,7 @@ footer{
 
 <p>Serving homeowners with reliable repair, remodeling, and construction services.</p>
 
-<a class="button" href="#contact">
+<a class="button" href="#" onclick="openEstimateForm()">
 Request an Estimate
 </a>
 
@@ -317,11 +401,98 @@ Email Us
 
 </section>
 
+<div id="estimateModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeEstimateForm()">
+            &times;
+        </span>
+
+        <h2>Request an Estimate</h2>
+
+        <form>
+
+            <div class="form-group">
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    placeholder="Your name">
+            </div>
+
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input 
+                    type="tel" 
+                    placeholder="(555) 555-5555">
+            </div>
+
+
+            <div class="form-group">
+                <label>Email</label>
+                <input 
+                    type="email" 
+                    placeholder="you@example.com">
+            </div>
+
+
+            <div class="form-group">
+                <label>Project Details</label>
+
+                <textarea 
+                    placeholder="Tell us about your project...">
+                </textarea>
+
+            </div>
+
+
+            <button class="button form-submit">
+                Submit Request
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+    
 <footer>
 
 © 2026 Cardona Home Services
 
 </footer>
 
+<script>
+
+function openEstimateForm(){
+
+    document.getElementById("estimateModal").style.display="flex";
+
+}
+
+
+function closeEstimateForm(){
+
+    document.getElementById("estimateModal").style.display="none";
+
+}
+
+
+window.onclick = function(event){
+
+    let modal = document.getElementById("estimateModal");
+
+    if(event.target == modal){
+
+        modal.style.display="none";
+
+    }
+
+}
+
+</script>
+    
 </body>
 </html>
