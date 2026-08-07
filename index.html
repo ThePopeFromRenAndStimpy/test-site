@@ -1,698 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cardona Home Services</title>
+    <title>Cardona Home Services</title>
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
-
-<style>
-
-html{
-    scroll-behavior: smooth;
-}
-    
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f7f7f7;
-    color:#333;
-    line-height:1.6;
-}
-
-header{
-    background:#1f2937;
-    color:white;
-    padding:20px 60px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-header h1{
-    font-size: clamp(22px, 5vw, 28px);
-    text-align: center;
-    line-height: 1.2;
-}
-
-nav a{
-    color:white;
-    margin-left:25px;
-    text-decoration:none;
-}
-
-nav a:hover{
-    color:#4ade80;
-}
-
-.hero{
-    height:70vh;
-
-    background:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-        url("https://picsum.photos/1600/900?random=1");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-}
-
-.hero h2{
-    font-size:54px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    margin-bottom:30px;
-}
-
-.button{
-    display:inline-block;
-    background:#22c55e;
-    color:white;
-    padding:15px 35px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.button:hover{
-    background:#16a34a;
-}
-
-.call-button{
-
-    background:#22c55e;
-
-    color:white;
-
-    padding:12px 22px;
-
-    border-radius:8px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    white-space:nowrap;
-
-    transition:.3s ease;
-}
-
-
-.call-button:hover{
-
-    background:#16a34a;
-
-    transform:translateY(-2px);
-
-}
-
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 30px;
-}
-
-h2{
-    margin-bottom:35px;
-    text-align:center;
-    font-size:38px;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    text-align:center;
-    transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(0,0,0,.12);
-}    
-    
-.card h3{
-    margin-bottom:15px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
-
-.gallery img{
-    width:100%;
-    border-radius:10px;
-    display:block;
-}
-
-.about{
-    text-align:center;
-    max-width:800px;
-}
-
-.contact{
-    background:white;
-    padding:40px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-footer{
-    background:#1f2937;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
-
- /* Brand Colors */
-:root {
-    /* Brand Colors */
-    --bright-orange: #FF8A1F;
-    --bright-blue: #2F80ED;
-    --dark-orange: #C05632;
-    --dark-blue: #102A43;
-    --white: #F8FAFC;
-
-    /* Optional usage colors */
-    --background: var(--white);
-    --text-primary: var(--dark-blue);
-    --text-secondary: #52677A;
-    --accent: var(--bright-orange);
-  }
-
-  /* Basic defaults */
-  body {
-    background-color: var(--background);
-    color: var(--text-primary);
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  /* Example utility classes */
-  .orange {
-    color: var(--bright-orange);
-  }
-
-  .blue {
-    color: var(--bright-blue);
-  }
-
-  .dark-orange {
-    color: var(--dark-orange);
-  }
-
-  .dark-blue {
-    color: var(--dark-blue);
-  }
-
-  .bg-orange {
-    background-color: var(--bright-orange);
-  }
-
-  .bg-blue {
-    background-color: var(--bright-blue);
-  }
-
-  .bg-dark {
-    background-color: var(--dark-blue);
-  }
-
-  .button-primary {
-    background-color: var(--bright-orange);
-    color: var(--white);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-  .button-primary:hover {
-    background-color: var(--dark-orange);
-  }
-
-  .button-secondary {
-    background-color: var(--bright-blue);
-    color: var(--white);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-  .button-secondary:hover {
-    background-color: var(--dark-blue);
-  }
-
- /* Brand Colors */
-    
-/* Estimate Form Modal */
-
-.modal{
-    display:none;
-    position:fixed;
-    z-index:2000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.55);
-
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-}
-
-.modal-content{
-
-    background:#f9fafb;
-
-    width:90%;
-    max-width:420px;
-
-    border-radius:16px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.25);
-
-    position:relative;
-}
-
-
-.modal-content h2{
-
-    background:#1f2937;
-
-    color:white;
-
-    padding:25px;
-
-    margin:0;
-
-    font-size:28px;
-
-    text-align:center;
-}
-
-
-.modal-content form{
-
-    padding:25px;
-
-}
-
-
-.close{
-
-    position:absolute;
-
-    top:12px;
-    right:18px;
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    color:white;
-
-    z-index:2;
-
-}
-
-
-.close:hover{
-
-    color:#4ade80;
-
-}
-
-
-.form-group{
-
-    margin-bottom:18px;
-
-}
-
-
-.form-group label{
-
-    display:block;
-
-    margin-bottom:7px;
-
-    font-weight:bold;
-
-    color:#374151;
-
-}
-
-
-.form-group input,
-.form-group textarea{
-
-    width:100%;
-
-    padding:12px 14px;
-
-    border:1px solid #d1d5db;
-
-    border-radius:8px;
-
-    background:white;
-
-    font-size:16px;
-
-    font-family:Arial,Helvetica,sans-serif;
-
-    transition:border .2s, box-shadow .2s;
-
-}
-
-
-.form-group input:focus,
-.form-group textarea:focus{
-
-    outline:none;
-
-    border-color:#22c55e;
-
-    box-shadow:0 0 0 3px rgba(34,197,94,.2);
-
-}
-
-
-.form-group textarea{
-
-    height:100px;
-
-    resize:none;
-
-}
-
-
-.form-submit{
-
-    width:100%;
-
-    border:none;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    margin-top:5px;
-
-}
-
-/* Estimate Form Modal End */
-
-@media (max-width:700px){
-
-    header{
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    header h1{
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
-    .call-button{
-        margin-top:15px;
-    }
-
-    nav{
-        margin-top: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    nav a{
-        margin-left: 0;
-    }
-
-    .hero h2{
-        font-size: 34px;
-    }
-
-    .hero p{
-        font-size: 18px;
-        padding: 0 10px;
-    }
-}
-
-</style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 
 <body>
 
-<header>
+    <header>
 
-    <h1>Cardona Home Services</h1>
+        <h1>Cardona Home Services</h1>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <a class="call-button" href="tel:5555555555">
-        📞 Call Now
-    </a>
+        <a class="call-button" href="tel:5555555555">
+            📞 Call Now
+        </a>
 
-</header>
-
-<section class="hero">
-
-<div>
-
-<h2>Quality Craftsmanship.<br>Honest Pricing.</h2>
-
-<p>Serving homeowners with reliable repair, remodeling, and construction services.</p>
-
-<a class="button" href="#" onclick="openEstimateForm()">
-Request an Estimate
-</a>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<h2>Services</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Flooring</h3>
-<p>Installation, repairs, and maintenance.</p>
-</div>
-
-<div class="card">
-<h3>Interior Painting</h3>
-<p>Professional finishes for every room.</p>
-</div>
-
-<div class="card">
-<h3>Drywall</h3>
-<p>Patching, repairs, installation, and texture matching.</p>
-</div>
-
-<div class="card">
-<h3>Pressure Washing</h3>
-<p>Driveways, siding, patios, fences, and more.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Recent Projects</h2>
-
-<div class="gallery">
-
-<img src="https://picsum.photos/500/350?random=2">
-<img src="https://picsum.photos/500/350?random=3">
-<img src="https://picsum.photos/500/350?random=4">
-<img src="https://picsum.photos/500/350?random=5">
-<img src="https://picsum.photos/500/350?random=6">
-<img src="https://picsum.photos/500/350?random=7">
-
-</div>
-
-</section>
-
-<section id="about" class="about">
-
-<h2>About Us</h2>
-
-<p>
-
-Cardona Home Services is committed to delivering dependable workmanship,
-clear communication, and projects completed with attention to detail.
-Whether it's a small repair or a larger renovation, customer satisfaction
-is our highest priority.
-
-</p>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact">
-
-<h3>Request a Free Estimate</h3>
-
-<p>📞 (555) 555-5555</p>
-
-<p>✉️ estimates@example.com</p>
-
-<p>Serving Your Local Area</p>
-
-<br>
-
-<a class="button" href="mailto:estimates@example.com">
-Email Us
-</a>
-
-</div>
-
-</section>
-
-<div id="estimateModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close" onclick="closeEstimateForm()">
-            &times;
-        </span>
-
-        <h2>Request an Estimate</h2>
-
-        <form>
-
-            <div class="form-group">
-                <label>Name</label>
-                <input 
-                    type="text" 
-                    placeholder="Your name">
-            </div>
+    </header>
 
 
-            <div class="form-group">
-                <label>Phone</label>
-                <input 
-                    type="tel" 
-                    placeholder="(555) 555-5555">
-            </div>
+    <main>
+
+        <section id="about">
+
+            <p>
+                Cardona Home Services is committed to delivering dependable 
+                workmanship, clear communication, and projects completed 
+                with attention to detail.
+
+                Whether it's a small repair or a larger renovation, 
+                customer satisfaction is our highest priority.
+            </p>
+
+        </section>
 
 
-            <div class="form-group">
-                <label>Email</label>
-                <input 
-                    type="email" 
-                    placeholder="you@example.com">
-            </div>
+        <section id="contact">
+
+            <div class="modal-content">
+
+                <span class="close">
+                    &times;
+                </span>
 
 
-            <div class="form-group">
-                <label>Project Details</label>
+                <h2>Request an Estimate</h2>
 
-                <textarea 
-                    placeholder="Tell us about your project...">
-                </textarea>
+
+                <form>
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input 
+                            type="text" 
+                            placeholder="Your name">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input 
+                            type="tel" 
+                            placeholder="(555) 555-5555">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input 
+                            type="email" 
+                            placeholder="you@example.com">
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Project Details</label>
+
+                        <textarea 
+                            placeholder="Tell us about your project...">
+                        </textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="button form-submit">
+                        Submit Request
+                    </button>
+
+                </form>
 
             </div>
 
-
-            <button type="submit" class="button form-submit">
-                Submit Request
-            </button>
+        </section>
 
 
-        </form>
-
-    </div>
-
-</div>
-    
-<footer>
-
-© 2026 Cardona Home Services
-
-</footer>
-
-<script>
-
-function openEstimateForm(){
-
-    document.getElementById("estimateModal").style.display="flex";
-
-}
+    </main>
 
 
-function closeEstimateForm(){
+    <footer>
 
-    document.getElementById("estimateModal").style.display="none";
+        <p>
+            © 2026 Cardona Home Services
+        </p>
 
-}
+    </footer>
 
 
-window.onclick = function(event){
-
-    let modal = document.getElementById("estimateModal");
-
-    if(event.target == modal){
-
-        modal.style.display="none";
-
-    }
-
-}
-
-</script>
-    
 </body>
+
 </html>
