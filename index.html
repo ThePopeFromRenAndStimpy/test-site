@@ -94,6 +94,34 @@ nav a:hover{
     background:#16a34a;
 }
 
+.call-button{
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    white-space:nowrap;
+
+    transition:.3s ease;
+}
+
+
+.call-button:hover{
+
+    background:#16a34a;
+
+    transform:translateY(-2px);
+
+}
+
 section{
     max-width:1100px;
     margin:auto;
@@ -172,79 +200,160 @@ footer{
     top:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.6);
+    background:rgba(0,0,0,.55);
 
     justify-content:center;
     align-items:center;
+
+    padding:20px;
 }
 
 .modal-content{
-    background:white;
+
+    background:#f9fafb;
+
     width:90%;
-    max-width:500px;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    max-width:420px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
 
     position:relative;
 }
 
-.modal-content h2{
-    margin-bottom:20px;
-    font-size:30px;
-}
 
-.close{
-    position:absolute;
-    top:15px;
-    right:20px;
+.modal-content h2{
+
+    background:#1f2937;
+
+    color:white;
+
+    padding:25px;
+
+    margin:0;
 
     font-size:28px;
+
+    text-align:center;
+}
+
+
+.modal-content form{
+
+    padding:25px;
+
+}
+
+
+.close{
+
+    position:absolute;
+
+    top:12px;
+    right:18px;
+
+    font-size:30px;
+
     font-weight:bold;
 
     cursor:pointer;
-    color:#555;
+
+    color:white;
+
+    z-index:2;
+
 }
+
 
 .close:hover{
-    color:#111;
+
+    color:#4ade80;
+
 }
+
 
 .form-group{
+
     margin-bottom:18px;
-    text-align:left;
+
 }
 
+
 .form-group label{
+
     display:block;
-    margin-bottom:6px;
+
+    margin-bottom:7px;
+
     font-weight:bold;
+
+    color:#374151;
+
 }
+
 
 .form-group input,
 .form-group textarea{
 
     width:100%;
-    padding:12px;
 
-    border:1px solid #ccc;
+    padding:12px 14px;
+
+    border:1px solid #d1d5db;
+
     border-radius:8px;
 
+    background:white;
+
     font-size:16px;
+
     font-family:Arial,Helvetica,sans-serif;
+
+    transition:border .2s, box-shadow .2s;
+
 }
+
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:#22c55e;
+
+    box-shadow:0 0 0 3px rgba(34,197,94,.2);
+
+}
+
 
 .form-group textarea{
-    height:120px;
+
+    height:100px;
+
     resize:none;
+
 }
 
+
 .form-submit{
+
     width:100%;
+
     border:none;
+
     cursor:pointer;
+
     font-size:16px;
+
+    margin-top:5px;
+
 }
+
+/* Estimate Form Modal End */
 
 @media (max-width:700px){
 
@@ -257,6 +366,10 @@ footer{
     header h1{
         font-size: 24px;
         margin-bottom: 15px;
+    }
+
+    .call-button{
+        margin-top:15px;
     }
 
     nav{
@@ -288,14 +401,18 @@ footer{
 
 <header>
 
-<h1>Cardona Home Services</h1>
+    <h1>Cardona Home Services</h1>
 
-<nav>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="call-button" href="tel:5555555555">
+        📞 Call Now
+    </a>
 
 </header>
 
@@ -447,7 +564,7 @@ Email Us
             </div>
 
 
-            <button class="button form-submit">
+            <button type="submit" class="button form-submit">
                 Submit Request
             </button>
 
