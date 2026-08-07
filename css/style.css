@@ -111,8 +111,13 @@ nav a:hover {
 
 .hero {
 
-    height:70vh;
+    min-height:70vh;
 
+    width:100%;
+
+    max-width:none;
+
+    padding:0;
 
     background:
 
@@ -123,18 +128,15 @@ nav a:hover {
 
     url("https://picsum.photos/1600/900?random=1");
 
-
     background-size:cover;
 
     background-position:center;
-
 
     display:flex;
 
     align-items:center;
 
     justify-content:center;
-
 
     text-align:center;
 
@@ -238,13 +240,9 @@ nav a:hover {
 
 
 section {
-
     max-width:1100px;
-
     margin:auto;
-
     padding:80px 30px;
-
 }
 
 
